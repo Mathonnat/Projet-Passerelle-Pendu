@@ -1,0 +1,64 @@
+body {
+    font-family: sans-serif;
+}
+h1 {
+    font-size: 3em;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    width: 50px;
+    height: 30px;
+    font-family: sans-serif;
+    border-color: transparent;
+}
+.image {
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container_lettres {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#tiret {
+    margin-top: 50px;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+#commencer {
+    padding: 15px 32px;
+    background-color: #04AA6D;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+#recommencer {
+    margin-top: 25px;
+    padding: 15px 32px;
+    background-color: #04AA6D;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+#commentaire {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+}
