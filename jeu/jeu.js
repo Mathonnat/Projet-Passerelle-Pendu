@@ -59,28 +59,28 @@ function jouer(){
 
     // Récupération des lettres cliqué 
     let vieRestante = 7;
-    let lettresCliquees = [];
-    let lettresCorrectes = 0;
+    let lettreCliquee = [];
+    let bonneLettre = 0;
     
     lettres.forEach((lettre) =>
       lettre.addEventListener("click", (x) => {
-      let lettreCliquee = x.target.textContent;      
+      let clique = x.target.textContent;      
       
       
 // Vérifier si les lettres on déjà étais cliquer.
-        if (!lettresCliquees.includes(lettreCliquee)) {
-        lettresCliquees.push(lettreCliquee);
+        if (!lettreCliquee.includes(clique)) {
+          lettreCliquee.push(clique);
         let bonneReponse = false;
         lettre.style.backgroundColor = "red";
 
   
 // Vérifier que la lettre sois correcte
        separation.forEach((lettreSeparer, index) => {
-        if (lettreSeparer.toUpperCase() === lettreCliquee.toUpperCase()) {
+        if (lettreSeparer.toUpperCase() === clique.toUpperCase()) {
         lesGenerationDesTirets[index].textContent = lettreSeparer;
         bonneReponse = true;
+        bonneLettre++;
         lettre.style.backgroundColor = "green";
-      bonneReponse++
           } 
         });
     
@@ -140,7 +140,7 @@ function jouer(){
 lesImages();       
 
 // Annonce des résultats
-          if (lettresCorrectes === separation.length){
+          if (bonneLettre === separation.length){
             document.getElementById("recommencer").hidden = false;
             commentaire.textContent = "Félication vous remporter la parti"
             document.getElementById("alphabet").hidden = true;
